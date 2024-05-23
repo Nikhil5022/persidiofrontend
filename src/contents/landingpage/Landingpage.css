@@ -1,0 +1,60 @@
+/* Hero Section */
+.hero-section {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Feature Cards */
+  .feature-card {
+    animation: fadeInLeft 1s ease-out forwards;
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Testimonial */
+  .testimonial {
+    animation: fadeInRight 1s ease-out forwards;
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Add this to your Landingpage.css */
+
+.hero-section,
+.features-section,
+.testimonials-section,
+.contact-section,
+footer {
+  width: 100%;
+  max-width: 100%;
+}
+
+  
