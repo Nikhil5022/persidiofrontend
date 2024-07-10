@@ -32,11 +32,11 @@ function Login({ isTrue }) {
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     console.log("Login Data:", loginData);
-    // Add logic to submit login data
+
     axios.post("https://presidioserver.vercel.app/login", loginData).then((res) => {
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("userid", res.data.id);
-      // close the modal
+
       window.location.reload();
     }
     ).catch((err) => {
@@ -48,17 +48,17 @@ function Login({ isTrue }) {
   const handleSignupSubmit = (e) => {
     e.preventDefault();
     console.log("Signup Data:", signupData);
-    // Add validation for phone number
+
     if (signupData.phoneNumber.length !== 10) {
       console.error("Phone number must be 10 digits");
       return;
     }
-    // Add validation for password
+
     if (signupData.password.length < 6) {
       console.error("Password must be at least 6 characters long");
       return;
     }
-    // Add logic to submit signup data
+
     axios
       .post("https://presidioserver.vercel.app/register", signupData)
       .then((res) => {

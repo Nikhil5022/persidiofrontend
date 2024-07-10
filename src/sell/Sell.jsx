@@ -48,7 +48,7 @@ export default function Sell() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form Data:', formData);
-    // Add logic to handle form submission, such as sending data to a backend server
+
     axios.post('https://presidioserver.vercel.app/property', formData).then((res) => {
       console.log(res.data);
       alert('Property added successfully');
